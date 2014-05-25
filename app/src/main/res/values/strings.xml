@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TaigIME</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_options">OptionsActivity</string>
+    <string name="display_name">TaigIME</string>
+    <string name="subtype1">Type1</string>
+
+    <string-array name="Tailuo">
+        <item>g</item>
+        <item>b</item>
+        <item>p</item>
+        <item>m</item>
+        <item>ph</item>
+        <item>t</item>
+        <item>n</item>
+        <item>th</item>
+        <item>k</item>
+        <item>l</item>
+        <item>h</item>
+        <item>kh</item>
+        <item>tsh</item>
+        <item>ts</item>
+        <item>s</item>
+        <item>ts</item>
+        <item>j</item>
+        <item>s</item>
+        <item>tsh</item>
+        <item>ng</item>
+        <item>u</item>
+        <item>m</item>
+        <item>i</item>
+        <item>o</item>
+        <item>a</item>
+        <item>oo</item>
+        <item>e</item>
+        <item>ng</item>
+        <item>n</item>
+        <item>nn</item>
+    </string-array>
+    <string-array name="Bopomo">
+        <item>ㆣ</item>
+        <item>ㆠ</item>
+        <item>ㄅ</item>
+        <item>ㄇ</item>
+        <item>ㄆ</item>
+        <item>ㄉ</item>
+        <item>ㄋ</item>
+        <item>ㄊ</item>
+        <item>ㄍ</item>
+        <item>ㄌ</item>
+        <item>ㄏ</item>
+        <item>ㄎ</item>
+        <item>ㄑ</item>
+        <item>ㄐ</item>
+        <item>ㄒ</item>
+        <item>ㄗ</item>
+        <item>ㄖ</item>
+        <item>ㄙ</item>
+        <item>ㄘ</item>
+        <item>ㄥ</item>
+        <item>ㄨ</item>
+        <item>ㄇ</item>
+        <item>ㄧ</item>
+        <item>ㄜ</item>
+        <item>ㄚ</item>
+        <item>ㄛ</item>
+        <item>ㄝ</item>
+        <item>ㄥ</item>
+        <item>ㄣ</item>
+        <item>°</item>
+    </string-array>
+    <string-array name="Bopomo_initiales">
+        <item>ㆣ</item>
+        <item>ㆠ</item>
+        <item>ㄅ</item>
+        <item>ㄇ</item>
+        <item>ㄆ</item>
+        <item>ㄉ</item>
+        <item>ㄋ</item>
+        <item>ㄊ</item>
+        <item>ㄍ</item>
+        <item>ㄌ</item>
+        <item>ㄏ</item>
+        <item>ㄎ</item>
+        <item>ㄑ</item>
+        <item>ㄐ</item>
+        <item>ㄒ</item>
+        <item>ㄗ</item>
+        <item>ㄖ</item>
+        <item>ㄙ</item>
+        <item>ㄘ</item>
+        <item>ㄥ</item>
+        <item>ㄨ</item>
+        <item>ㄇ</item>
+    </string-array>
+    <string-array name="Bopomo_medianes">
+        <item>ㄧ</item>
+        <item>ㄜ</item>
+        <item>ㄚ</item>
+        <item>ㄛ</item>
+        <item>ㄝ</item>
+    </string-array>
+    <string-array name="Bopomo_finales">
+        <item>ㄥ</item>
+        <item>ㄞ</item>
+        <item>ㄢ</item>
+        <item>ㄤ</item>
+        <item>ㄠ</item>
+    </string-array>
+
+    <string-array name="dialect_list">
+        <item>馬公</item>
+<item>高雄</item>
+<item>三峽</item>
+<item>臺北</item>
+<item>新竹</item>
+<item>金門</item>
+<item>鹿港</item>
+<item>臺南</item>
+<item>臺中</item>
+<item>宜蘭</item>
+        
+        
+        
+    </string-array>
+    
+    <string name="Bopomo_re">((Ø|ㄉ|ㄒ|ㄙ|ㄏ|ㆠ|ㄐ|ㄗ|ㄑ|ㄘ|ㆣ|ㄖ|ㄍ|ㄎ|ㄌ|ㄇ|ㄋ|ㄥ|ㄅ|ㄆ|ㄊ)?([ㄚㄧㄨㄜㄛㄝ]+°?|ㄇ|ㄥ)((ㄣ|ㄥ|ㄇ)|(ㄅ|ㄉ|ㄍ|ㄏ))?([1&#8211;8])?)|(ㄉ|ㄒ|ㄙ|ㄏ|ㆠ|ㄐ|ㄗ|ㄑ|ㄘ|ㆣ|ㄖ|ㄍ|ㄎ|ㄌ|ㄇ|ㄋ|ㄥ|ㄅ|ㄆ|ㄊ)</string>
+    <string name="options_title">Preferences</string>
+    <string name="options_tailuo">input Tailuo on return</string>
+    <string name="options_fuzzy_ru">entering tones not mandatory</string>
+    <string name="options_initials_only">allow the input of initials only</string>
+    <string name="options_mb">try to replace m with b</string>
+    <string name="title_activity_community">About</string>
+    <string name="options_smallsize">Use a small keyboard</string>
+</resources>

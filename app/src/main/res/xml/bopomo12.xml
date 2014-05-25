@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* 
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="30%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="@dimen/key_height"
+    
+    >
+
+    <Row>
+<!--         <Key android:codes="12549,12550,12704,12551" android:keyLabel="ㄅㄆㆠㄇ" android:keyEdgeFlags="left"/> -->
+		<Key android:codes="12704,12549,12550,12551" android:keyLabel="ㆠ.." android:keyEdgeFlags="left" android:popupCharacters="ㆠㄆㄅㄇ" android:popupKeyboard="@xml/popupkey"/>
+        <Key android:codes="12553,12554,12555,12556" android:keyLabel="ㄉ.." android:popupCharacters="ㄉㄊㄋㄌ" android:popupKeyboard="@xml/popupkey" />
+        <Key android:codes="12707,12557,12558,12559" android:keyLabel="ㆣ.." android:popupCharacters="ㆣㄎㄍㄏ" android:popupKeyboard="@xml/popupkey"/>
+        <Key android:codes="176,45" android:keyLabel="°/-" android:keyEdgeFlags="right" android:keyWidth="10%p"/>
+    </Row>
+    <Row>
+        <Key android:codes="12560,12561,12562" android:keyLabel="ㄐ.." android:popupCharacters="ㄐㄑㄒ" android:popupKeyboard="@xml/popupkey" android:keyEdgeFlags="left"/>
+        <Key android:codes="12567,12569,12566" android:keyLabel="ㄗ.." android:popupCharacters="ㄗㄘㄙㄖ" android:popupKeyboard="@xml/popupkey"/>
+        <Key android:codes="12570,12571,12568,12572,12573" android:keyLabel="ㄚ.." android:popupCharacters="ㄚㄛㄜㄝ" android:popupKeyboard="@xml/popupkey"/>
+        <Key android:codes="49,50,51,52,53,55,56" android:keyLabel="^" android:keyEdgeFlags="right" android:keyWidth="10%p" android:popupCharacters="1234578" android:popupKeyboard="@xml/popupkey"/>
+    </Row>
+    
+    <Row>
+        <Key android:codes="12583,12584" android:keyLabel="ㄧ/ㄨ" android:popupCharacters="ㄧㄨ" android:popupKeyboard="@xml/popupkey" android:keyEdgeFlags="left" />
+        <Key android:codes="12574,12576" android:keyLabel="ㄞ/ㄠ" android:popupCharacters="ㄞㄠ" android:popupKeyboard="@xml/popupkey"/>
+        <Key android:codes="12578,12579,12580,12581" android:keyLabel="ㄢ" android:popupCharacters="ㄢㄣㄤㄥ" android:popupKeyboard="@xml/popupkey"/>
+        <Key android:codes="-42" android:keyIcon="@drawable/ic_menu_allfriends" android:keyEdgeFlags="right" android:keyWidth="10%p" />
+    </Row>
+    <Row>
+        <Key android:codes="-10" android:keyIcon="@drawable/sym_keyboard_search" android:keyEdgeFlags="left" />
+        <Key android:codes="65292,12290,65311,65281" android:keyLabel="。.." />
+        <Key android:codes="-20" android:keyLabel="TL"  android:keyEdgeFlags="right"/>
+        <Key android:codes="10" android:keyIcon="@drawable/sym_keyboard_return"  android:keyEdgeFlags="right" android:keyWidth="10%p"/>
+    </Row>
+    
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="-3" android:keyIcon="@drawable/sym_keyboard_done"  android:keyEdgeFlags="left" android:keyWidth="25%p"/>
+        <Key android:codes="-2" android:keyLabel="123"/>
+        <Key android:codes="32" android:keyIcon="@drawable/sym_keyboard_space" android:isRepeatable="true" android:keyWidth="25%p"/>
+        <Key android:codes="-5" android:keyIcon="@drawable/sym_keyboard_delete" android:keyEdgeFlags="right" android:keyWidth="25%p" />
+    </Row>
+</Keyboard>
+    
