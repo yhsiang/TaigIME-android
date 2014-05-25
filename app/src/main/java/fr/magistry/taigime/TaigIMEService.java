@@ -266,11 +266,6 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
 	}
 
 	private void Community() {
-		// TODO Auto-generated method stub
-		//http://twblg.dict.edu.tw/holodict_new/result.jsp?radiobutton=0&limit=20&querytarget=1&sample=%E1%B8%BF&submit.x=20&submit.y=20
-		//String url = "http://taigime.magistry.fr/community/";
-		//Intent i = new Intent(Intent.ACTION_VIEW);
-		//i.setData(Uri.parse(url));
 		Intent i = new Intent(this,CommunityActivity.class);
 		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -314,15 +309,23 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
 
 	@Override
 	public void swipeLeft() {
-		// TODO Auto-generated method stub
-		
+        mCurrentKeyboard -= 1;
+        if(mCurrentKeyboard < 0 )
+            mCurrentKeyboard = mKeyboards.length -1;
+        mCurrentIsSymbols = false;
+        mInputView.setKeyboard(mKeyboards[mCurrentKeyboard]);
+        mComposing.setLength(0);
 	}
 
 
 	@Override
 	public void swipeRight() {
-		// TODO Auto-generated method stub
-		
+        mCurrentKeyboard += 1;
+        if(mCurrentKeyboard == mKeyboards.length)
+            mCurrentKeyboard = 0;
+        mCurrentIsSymbols = false;
+        mInputView.setKeyboard(mKeyboards[mCurrentKeyboard]);
+        mComposing.setLength(0);
 	}
 
 
