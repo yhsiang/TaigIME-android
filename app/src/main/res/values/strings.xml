@@ -110,24 +110,20 @@
         <item>ㄤ</item>
         <item>ㄠ</item>
     </string-array>
-
     <string-array name="dialect_list">
         <item>馬公</item>
-<item>高雄</item>
-<item>三峽</item>
-<item>臺北</item>
-<item>新竹</item>
-<item>金門</item>
-<item>鹿港</item>
-<item>臺南</item>
-<item>臺中</item>
-<item>宜蘭</item>
-        
-        
-        
+        <item>高雄</item>
+        <item>三峽</item>
+        <item>臺北</item>
+        <item>新竹</item>
+        <item>金門</item>
+        <item>鹿港</item>
+        <item>臺南</item>
+        <item>臺中</item>
+        <item>宜蘭</item>
     </string-array>
-    
-    <string name="Bopomo_re">((Ø|ㄉ|ㄒ|ㄙ|ㄏ|ㆠ|ㄐ|ㄗ|ㄑ|ㄘ|ㆣ|ㄖ|ㄍ|ㄎ|ㄌ|ㄇ|ㄋ|ㄥ|ㄅ|ㄆ|ㄊ)?([ㄚㄧㄨㄜㄛㄝ]+°?|ㄇ|ㄥ)((ㄣ|ㄥ|ㄇ)|(ㄅ|ㄉ|ㄍ|ㄏ))?([1&#8211;8])?)|(ㄉ|ㄒ|ㄙ|ㄏ|ㆠ|ㄐ|ㄗ|ㄑ|ㄘ|ㆣ|ㄖ|ㄍ|ㄎ|ㄌ|ㄇ|ㄋ|ㄥ|ㄅ|ㄆ|ㄊ)</string>
+
+    <string name="Bopomo_re">((Ø|ㄉ|ㄒ|ㄙ|ㄏ|ㆠ|ㄐ|ㄗ|ㄑ|ㄘ|ㆣ|ㄖ|ㄍ|ㄎ|ㄌ|ㄇ|ㄋ|ㄥ|ㄅ|ㄆ|ㄊ)?([ㄚㄧㄨㄜㄛㄝ]+°?|ㄇ|ㄥ)((ㄣ|ㄥ|ㄇ)|(ㄅ|ㄉ|ㄍ|ㄏ))?([1–8])?)|(ㄉ|ㄒ|ㄙ|ㄏ|ㆠ|ㄐ|ㄗ|ㄑ|ㄘ|ㆣ|ㄖ|ㄍ|ㄎ|ㄌ|ㄇ|ㄋ|ㄥ|ㄅ|ㄆ|ㄊ)</string>
     <string name="options_title">Preferences</string>
     <string name="options_tailuo">input Tailuo on return</string>
     <string name="options_fuzzy_ru">entering tones not mandatory</string>
@@ -135,4 +131,7 @@
     <string name="options_mb">try to replace m with b</string>
     <string name="title_activity_community">About</string>
     <string name="options_smallsize">Use a small keyboard</string>
+    <string name="title_activity_main">TaigIME</string>
+    <string name="action_settings">Settings</string>
+
 </resources>

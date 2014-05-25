@@ -67,12 +67,12 @@ public class CandidateView extends View {
     private GestureDetector mGestureDetector;
 
 	private Paint mPaintTRS;
+    private Paint mPaintBPM;
 	private boolean mOutputTRS = true;
 
     /**
      * Construct a CandidateView for showing suggested words for completion.
      * @param context
-     * @param attrs
      */
     public CandidateView(Context context) {
         super(context);
@@ -103,6 +103,10 @@ public class CandidateView extends View {
         mPaintTRS = new Paint();   
         mPaintTRS.set(mPaint);  
         mPaintTRS.setTextSize(r.getDimensionPixelSize(R.dimen.candidate_font_trs_height));
+
+        mPaintBPM = new Paint();
+        mPaintBPM.set(mPaintTRS);
+
         
         mGestureDetector = new GestureDetector(new GestureDetector.SimpleOnGestureListener() {
             @Override
@@ -213,14 +217,14 @@ public class CandidateView extends View {
             if (i==0){
             	hanji = ""; 
             	trs = "";//hanji;//TODO: conversion?
-            	if(mOutputTRS){
+            	//if(mOutputTRS){
             		trs = suggestion.getWord().getBopomo();
-            		textWidth = mPaintTRS.measureText(trs);
-            	}
-            	else {
-            		hanji = suggestion.getWord().getBopomo();
-            		textWidth = paint.measureText(hanji);
-            	}
+            		textWidth = mPaintBPM.measureText(trs);
+            	//}
+            	//else {
+            	//	hanji = suggestion.getWord().getBopomo();
+            	//	textWidth = paint.measureText(hanji);
+            	//}
             }
             else
               textWidth = paint.measureText(hanji);
@@ -247,10 +251,13 @@ public class CandidateView extends View {
             		activePaint = mPaintTRS;
             		secondPaint = paint;
             	}
-            	else{
+                else{
             		activePaint = paint;
             		secondPaint = mPaintTRS;
             	}
+                if(i==0) {
+                    activePaint = mPaintBPM;
+                }
             	secondPaint.setAlpha(150);
                 if ((i == mCursor)) {
                     activePaint.setFakeBoldText(true);
@@ -258,11 +265,15 @@ public class CandidateView extends View {
                 } else if (i != 0) {
                     activePaint.setColor(mColorOther);
                 }
-                
-                canvas.drawText(hanji, x + X_GAP, y, paint);
-                canvas.drawText(trs, x + X_GAP, y2, mPaintTRS);
+                if(i==0) {
+                    canvas.drawText(trs, x + X_GAP, y2, mPaintBPM);
+                }
+                else {
+                    canvas.drawText(hanji, x + X_GAP, y, paint);
+                    canvas.drawText(trs, x + X_GAP, y2, mPaintTRS);
+                }
                 activePaint.setColor(mColorOther); 
-                canvas.drawLine(x + wordWidth + 0.5f, bgPadding.top, 
+                canvas.drawLine(x + wordWidth + 0.5f, bgPadding.top,
                         x + wordWidth + 0.5f, height + 1, paint);
                 activePaint.setFakeBoldText(false);
                 secondPaint.setAlpha(255);
@@ -417,6 +428,8 @@ public class CandidateView extends View {
 
 	public void setTypeface(Typeface tf){
 		mPaint.setTypeface(tf);
+        mPaintBPM.setTypeface(tf);
+        mPaintTRS.setTypeface(tf);
 	}
 
 	public void setComposer(Composer composer) {

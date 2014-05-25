@@ -13,6 +13,10 @@ import java.util.List;
 
 
 public class Candidate {
+    /**
+     * A possible word given the input
+     */
+
 	private TaigiWord mWord;
 	private String mInput;
 	

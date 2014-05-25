@@ -17,6 +17,7 @@ public class Composer {
 	private ArrayList<TaigiSyl> mAnalyzedInput;
 	private ArrayList<Candidate> mSelection;
 	private ArrayList<Candidate> mCandidateList;
+    private String lastInput = "";
 	
 	public Composer(CandidateView cv, TaigIMEService ims){
 		mCandidateView = cv;
@@ -81,6 +82,7 @@ public class Composer {
 				mRawInput.delete(0, inputed.length());
 				selectionHasChanged();
 				inputHasChanged();
+                this.lastInput = choosen.getWord().getHanji();
 			}
 		}
 		
@@ -207,6 +209,9 @@ public class Composer {
 		
 	}
 
+    public String getLastInput(){
+        return this.lastInput;
+    }
  
 	public boolean acceptTL() {
 		if(mSelection.size() >0){

@@ -77,7 +77,7 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
         getSharedPreferences("TAIGI_IME", 0);
         getApplicationContext();
         
-        mFont = Typeface.createFromAsset(getAssets(), "fonts/bpm.ttf"); 
+        mFont = Typeface.createFromAsset(getAssets(), "fonts/MOEDICT.ttf");
         for(Key k :mBopomoKeyboard.getKeys()){
         	if(k.label != null){
         		
@@ -210,7 +210,7 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
 			if(!mComposer.accept()){
 				this.sendDownUpKeyEvents(KeyEvent.KEYCODE_ENTER);
 			}
-			break; 
+			break;
 		case -20: //TL key
 			//mComposer.acceptTL();
 			mCandidateView.setOutputTRS(!mCandidateView.isOutputTRS());
@@ -218,7 +218,7 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
 			break;
 		case -10: //dictLookup
 			//TODO
-			lookupDict(mComposer.getSelectionString());
+			lookupDict(mComposer.getLastInput());
 			return;
 		case 32 : //space
 			if(!mComposer.accept()){
@@ -372,7 +372,7 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
 	
 	private void lookupDict(CharSequence word){
 		//http://twblg.dict.edu.tw/holodict_new/result.jsp?radiobutton=0&limit=20&querytarget=1&sample=%E1%B8%BF&submit.x=20&submit.y=20
-		if(isAppInstalled("org.audreyt.dict.moe"))
+		if(false && isAppInstalled("org.audreyt.dict.moe"))
 		{
 		    Intent nextIntent = new Intent(Intent.ACTION_MAIN);
 		    nextIntent.setComponent(new ComponentName("org.audreyt.dict.moe","org.audreyt.dict.moe.MoeDict"));
@@ -387,7 +387,8 @@ public class TaigIMEService extends InputMethodService implements KeyboardView.O
 		mComposer.purge();
 		Toast toast = Toast.makeText(getBaseContext(), "查辭典「"+ word + "」", Toast.LENGTH_LONG);
 		toast.show();
-		String url = "http://twblg.dict.edu.tw/holodict_new/result.jsp?radiobutton=0&limit=20&querytarget=1&sample=" + word + "&submit.x=20&submit.y=20";
+		// String url = "http://twblg.dict.edu.tw/holodict_new/result.jsp?radiobutton=0&limit=20&querytarget=1&sample=" + word + "&submit.x=20&submit.y=20";
+        String url = "http://moedict.tw/'" + word;
 		Intent i = new Intent(Intent.ACTION_VIEW);
 		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		i.setData(Uri.parse(url));
