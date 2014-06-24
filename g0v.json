@@ -19,10 +19,11 @@
     "android",
   ],
   "audience": [
-    "contributor"
+    "contributor",
+    "public"
   ],
   "products": [
-    "android App"
+    "app"
   ],
   "projects": [ ],
   "contributors": [
