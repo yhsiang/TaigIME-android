@@ -1,0 +1,36 @@
+{
+  "author": "a-tsioh",
+  "status": "beta",
+  "name": "TaigIME",
+  "description": "Android　input method (IME) for Taiwanese from zhuyin or Taiwan Romanisation System (tâi-lô)",
+  "description_zh": "Android ê 臺語輸入法，用注音符號或臺羅輸入臺語",
+  "homepage": "https://plus.google.com/communities/101493598847860391958",
+  "document": "to be written",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-tsioh/TaigIME-android"
+  },
+  "licenses": [
+    {
+      "type": "GPL3"
+    }
+  ],
+  "keywords": [
+    "android",
+  ],
+  "audience": [
+    "contributor"
+  ],
+  "products": [
+    "android App"
+  ],
+  "projects": [ ],
+  "contributors": [
+    "a-tsioh"
+  ],
+  "needs": [
+    "writer",
+    "designer",
+    "coder"
+  ]
+}
